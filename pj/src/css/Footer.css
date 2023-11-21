@@ -1,0 +1,23 @@
+.Footer-container {
+    position: absolute;
+    /* 왜이러지? position 남발이 문제인가? */
+    left: 45%;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-logo {
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer-address {
+    margin-top: 5px;
+    font-size: 14px;
+    font-size: 600;
+}
+.footer-contact {
+    margin-top: 5px;
+    font-size: 14px;
+    font-size: 600;
+}
