@@ -1,0 +1,77 @@
+.page {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 415px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titleWrap {
+    margin-top: 60px;
+    font-size: 26px;   
+    font-weight: 700;
+    text-align: center;
+}
+.contentWrap {
+    margin-top: 25px;
+}
+.inputTitle{
+    font-size: 14px;
+    font-weight: 700;
+}
+.inputWrap {
+    display: flex;
+    border-radius: 16px;
+    padding: 14px;
+    margin-top: 8px;
+    background-color: white;
+    border: 1px solid #dadada;
+}
+.inputWrap:focus-within {
+    border: 1px solid #489ae7;
+}
+.input {
+    width: 800px;
+    outline: none;
+    border: none;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.input::placeholder {
+    color: #dadada;
+}
+.errorMessageWrap {
+    margin-top: 8px;
+    color: #ef0000;
+    font-size: 12px;
+}
+.bottomBtn{
+    margin-top: 50px;
+    width: 100%;
+    height: 48px;
+    border: none;
+    font-weight: 700;
+    background-color: #489ae7;
+    border-radius: 64px;
+    color: white;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+.bottomBtn:disabled {
+    background-color: #98c6ec;
+    color: white;
+}
+.gotoSignup {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+.SignupBtn{
+    margin-left: 8px;
+    color: #489ae7;
+}

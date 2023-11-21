@@ -1,0 +1,28 @@
+.Nav-container {
+    background-color: #bedcf3;
+    display: flex;
+    flex-direction: columns;
+    border-radius: 0 0 30px 0;
+    justify-content: space-between;
+}
+.bg-Ring {
+    position: relative;
+}
+.Nav-logo {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 700;
+    top: 30px;
+    left: 65%;
+}
+.bg-Light {
+    position: relative;
+    margin: 15px 10px 0 0;
+}
+.Nav-loginBtn {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    top: 15px;
+    right: 65%;
+}
