@@ -1,4 +1,4 @@
-.page {
+.Login-container {
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -6,9 +6,10 @@
     max-width: 415px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
 }
 .titleWrap {
-    margin-top: 60px;
+    margin-top: 30px;
     font-size: 26px;   
     font-weight: 700;
     text-align: center;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import '../../css/Signup.css';
-import Navbar from '../components/Main/Navbar'
-import Footer from '../components/Main/Footer'
+import '../css/Signup.css';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 /* 더미 데이터 */
 const User = {
