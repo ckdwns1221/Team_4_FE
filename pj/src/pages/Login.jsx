@@ -55,7 +55,7 @@ export default function Login() {
     return (
         <div className='display-container'>
             <Navbar/>
-            <div className="page">
+            <div className="Login-container">
                 <div className='titleWrap'>
                     로그인
                 </div>
