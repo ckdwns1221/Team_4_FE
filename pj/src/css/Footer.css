@@ -1,7 +1,11 @@
 .Footer-container {
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 20px 0;
 }
 .footer-logo {
     font-size: 18px;
