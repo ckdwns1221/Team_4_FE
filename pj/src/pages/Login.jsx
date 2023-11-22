@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
+/* import { Link } from 'react-router-dom' */
+
 import '../css/Login.css';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -36,12 +39,20 @@ export default function Login() {
         }
     }
     
-    const onClickConfirmButton = () => {
+    /* const onClickConfirmButton = () => {
         if(id === User.id && pw === User.pw) {
             alert('로그인에 성공했습니다.');
         } else {
             alert('등록되지 않은 회원입니다.');
         }
+    } */
+    const movePage= useNavigate();
+
+    function moveMain() {
+      movePage('/');
+    }
+    function moveSignup() {
+        movePage('/signup');
     }
 
     useEffect(() => {
@@ -95,12 +106,14 @@ export default function Login() {
                     </div>
                 </div>
                 <div>
-                    <button className='bottomBtn' disabled={notAllow} onClick={onClickConfirmButton}>
-                        로그인하기
+                        <button className='bottomBtn' disabled={notAllow} onClick={moveMain}>
+                            로그인하기
                         </button>
                     <div className='gotoSignup'>
                         아직 회원이 아니신가요?
-                        <div className='SignupBtn'>회원가입 하기</div>
+                        <div className='SignupBtn' onClick={moveSignup}>
+                            회원가입 하기
+                        </div>
                     </div>
                 </div>
             </div>

@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <div className="Footer-container">
             <div className='footer-logo'>
-                슼카이브
-                </div>
+                <img className='logo-gray' src="/img/Logo-gray.png" alt="Logo-gray.png" />
+            </div>
             <div className='footer-address'>
                 Contact : 슼카이브@ac.kr
             </div>
