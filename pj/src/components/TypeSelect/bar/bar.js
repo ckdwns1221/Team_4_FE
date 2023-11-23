@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import './bar.css';
+import { Link } from 'react-router-dom';
+
 
 const HeaderStyle = styled.header`
     width: 100%;
@@ -37,7 +39,9 @@ function TBar({color,category}) {
                 <img src='/images/Img_Light.png' alt='이미지2' id='light' />
             </div>
             <div className='ht-set1'>
-                <p id='tlogo'><img src='img/Logo.png' alt='로고'/></p>
+                <Link to='/'>
+                    <img id='tlogo' src='/img/Logo.png' alt='로고'/>
+                </Link>
                 <div id='ttext'>
                     <p id='ttitle'><strong>{category_1}</strong></p>
                     <p id='tinfo'>찾고자 하는 파일 유형을 선택해주세요.</p>
