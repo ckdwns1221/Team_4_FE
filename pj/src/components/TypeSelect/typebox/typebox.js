@@ -10,6 +10,8 @@ const ButtonStyle = styled.button`
     border-radius: 30px;
     margin-right: 16px;
     background-color: rgba(248, 249, 250, 1); 
+    font-family: 'Pretendard-Regular', 'sans-serif';
+    font-size: large;
 `;
 const TypeBox = ({category,color}) => {
     
