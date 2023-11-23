@@ -1,0 +1,23 @@
+/* .type-box button {
+    height: 130px;
+    width: 208px;
+    border: 1px solid rgba(255, 211, 146, 1); 
+    border-radius: 30px;
+    margin-right: 16px;
+    background-color: rgba(248, 249, 250, 1); 
+} */
+.type-box-all > button:nth-child(4){
+    margin-right: 0px;
+}
+/* 나중에 수정.. 포지션 안먹는듯 */
+.type-box-all > div > p {
+    /* 부모 */
+    position: relative; 
+    top: 20px;
+    left: 20px;
+}
+.type-box-all{
+    display: flex;
+    flex-direction: row;
+    
+}

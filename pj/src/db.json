@@ -1,0 +1,84 @@
+{
+    "notes": [
+        {
+            "id": 1,
+            "author": "최현호",
+            "title" : "기창 시험",
+            "content": "기창 시험 10/4",
+            "category": "news",
+            "type" : "memo",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 2,
+            "author": "최현호",
+            "title" : "아이라인 링크",
+            "content": "링크1",
+            "category": "news",
+            "type" : "link",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 3,
+            "author": "최현호",
+            "title" : "react 공부",
+            "content": "링크2",
+            "category": "news",
+            "type" : "link",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 4,
+            "author": "최현호",
+            "title" : "안녕",
+            "content": "ㅎㅇ",
+            "category": "news",
+            "type" : "memo",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 5,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 6,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 7,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },{
+            "id": 8,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 9,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          }
+    ]
+  }
