@@ -9,7 +9,7 @@ import Signup from './pages/Signup';
 import Main from './pages/Main/Main';
 import WriteScrap from './pages/WriteScrap';
 import TypeSelect from './pages/TypeSelect/TypeSelect';
-/* import ArticlesList from './pages/ArticlesList/ArticlesList'; */
+import ArticlesList from './pages/ArticlesList/ArticlesList';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,10 +35,10 @@ const router = createBrowserRouter([
         path: "/:category/*",
         element: <TypeSelect />,
       },
-      /* {
+      {
         path: "/:category/:type",
         element: <ArticlesList />,
-      }, */
+      },
     ],
   },
 ]);

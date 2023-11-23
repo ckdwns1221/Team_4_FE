@@ -1,0 +1,16 @@
+
+.type-box-all > button:nth-child(4){
+    margin-right: 0px;
+}
+/* 나중에 수정.. 포지션 안먹는듯 */
+.type-box-all p {
+    /* 부모 */
+    position: relative; 
+    bottom: 30px;
+    right: 60px;
+}
+.type-box-all{
+    display: flex;
+    flex-direction: row;
+    
+}
