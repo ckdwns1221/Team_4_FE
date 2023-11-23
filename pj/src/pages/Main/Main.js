@@ -85,38 +85,55 @@ function Main() {
                 </button>
             </div>
             <div className='main-fileWrap'>
-              <div className="fileBox-news">
-                <div className="boxHeader">시사/뉴스</div>
-                <img src="img/Ic_News.png" alt="Ic_News.png" className="fileIcon" />
-              </div>
-              <div className="fileBox-food">
-              <div className="boxHeader">푸드</div>
-                <img src="img/Ic_Fastfood.png" alt="" className="fileIcon" />
-              </div>
-              <div className="fileBox-arts">
-                <div className="boxHeader">문화/예술</div>
-                <img src="img/Ic_Brush.png" alt="" className="fileIcon" />
-              </div>
-              <div className="fileBox-finance">
-                <div className="boxHeader">경제/금융</div>
-                <img src="img/Ic_Finance.png" alt="" className="fileIcon" />
-              </div>
-              <div className="fileBox-tech">
-                <div className="boxHeader">It/기술</div>
-                <img src="img/Ic_Tech.png" alt="" className="fileIcon" />
-              </div>
-              <div className="fileBox-health">
-                <div className="boxHeader">건강/의학</div>
-                <img src="img/Ic_Health.png" alt="" className="fileIcon" />
-              </div>
-              <div className="fileBox-business">
-                <div className="boxHeader">비즈니스</div>
-                <img src="img/Ic_Business.png" alt="" className="fileIcon" />
-              </div>
-              <div className="fileBox-etc">
-                <div className="boxHeader">기타</div>
-                <img src="img/Ic_Etc.png" alt="" className="fileIcon" />
-              </div>
+              <Link to="/news">
+                <div className="fileBox-news">
+                  <div className="boxHeader">시사/뉴스</div>
+                  <img src="img/Ic_News.png" alt="Ic_News.png" className="fileIcon" />
+                </div>
+              </Link>
+              <Link to="/food">
+                <div className="fileBox-food">
+                  <div className="boxHeader">푸드</div>
+                  <img src="img/Ic_Fastfood.png" alt="" className="fileIcon" />
+                </div>
+              </Link>
+              <Link to="/culture">
+                <div className="fileBox-arts">
+                  <div className="boxHeader">문화/예술</div>
+                  <img src="img/Ic_Brush.png" alt="" className="fileIcon" />
+                </div>
+              </Link>
+              <Link to="/economy">
+                <div className="fileBox-finance">
+                  <div className="boxHeader">경제/금융</div>
+                  <img src="img/Ic_Finance.png" alt="" className="fileIcon" />
+                </div>
+              </Link>
+              <Link to="/it">
+                <div className="fileBox-tech">
+                  <div className="boxHeader">It/기술</div>
+                  <img src="img/Ic_Tech.png" alt="" className="fileIcon" />
+                </div>
+              </Link>
+              <Link to="/health">
+                <div className="fileBox-health">
+                  <div className="boxHeader">건강/의학</div>
+                  <img src="img/Ic_Health.png" alt="" className="fileIcon" />
+                </div>
+              </Link>
+              <Link to="/business">
+                <div className="fileBox-business">
+                  <div className="boxHeader">비즈니스</div>
+                  <img src="img/Ic_Business.png" alt="" className="fileIcon" />
+                </div>
+              </Link>
+              <Link to="/etc">
+                <div className="fileBox-etc">
+                  <div className="boxHeader">기타</div>
+                  <img src="img/Ic_Etc.png" alt="" className="fileIcon" />
+                </div>
+              </Link>
+              
             </div>
           </div>
         </div>
