@@ -38,3 +38,29 @@ header{
     color: white;
 
 }
+.hl-searchbarWrap {
+    position: absolute;
+    margin-right: 25px;
+    top: 91px;
+    right: 60px;
+}
+.hl-searchBtn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: inherit;
+    padding: 12px 0 0 5px;
+    cursor: pointer;
+}
+.hl-searchbarWrap > input {
+    width: 351px;
+    height: 40px;
+    border: none;
+    border-radius: 16px;
+    background-color: #f5f5f5;
+    padding-left: 50px;
+}
+.hl-searchbarWrap input::placeholder {
+    font-weight: 600;
+}
