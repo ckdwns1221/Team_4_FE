@@ -20,6 +20,9 @@ function Main() {
     function moveScrapSearch() {
       movePage('/');
     }
+    function moveShare() {
+      movePage('/share');
+    }
     /* function moveNews() {
       movePage('/');
     }
@@ -133,7 +136,12 @@ function Main() {
                   <img src="img/Ic_Etc.png" alt="" className="fileIcon" />
                 </div>
               </Link>
-              
+           </div>
+            <div className="gotoShareWrap">
+              다른 사람들의 스크랩도 궁금하다면?
+              <div className="gotoSPBtn" onClick={moveShare}>
+                공유 페이지로 이동
+              </div>
             </div>
           </div>
         </div>
