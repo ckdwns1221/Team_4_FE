@@ -11,6 +11,7 @@ const ButtonStyle = styled.button`
     margin-right: 16px;
     background-color: rgba(248, 249, 250, 1); 
     font-family: 'Pretendard-Regular', 'sans-serif';
+    font-size: large;
 `;
 const TypeBox = ({category,color}) => {
     

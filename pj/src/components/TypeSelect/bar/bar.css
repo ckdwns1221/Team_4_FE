@@ -12,12 +12,18 @@
 #ttext{
     display: flex;
     flex-direction: row;
+    align-items: center;
     position: absolute;
-    top: 97px;
+    top: 80px;
     left: 130px;
 } 
 #ttitle{
     margin-right: 20px;
+    font-size: 24px;
+}
+#tinfo{
+    font-size: 16px;
+    color: #5D5E5F;
 }
 #ring{
     position: absolute;

@@ -43,7 +43,7 @@ function TBar({color,category}) {
                     <img id='tlogo' src='/img/Logo.png' alt='로고'/>
                 </Link>
                 <div id='ttext'>
-                    <p id='ttitle'><strong>{category_1}</strong></p>
+                    <p id='ttitle'>{category_1}</p>
                     <p id='tinfo'>찾고자 하는 파일 유형을 선택해주세요.</p>
                 </div>
             </div>

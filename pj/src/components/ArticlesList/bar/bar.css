@@ -12,9 +12,11 @@ header{
 #tltext{
     display: flex;
     flex-direction: row;
+    align-items: center;
     position: absolute;
-    top: 97px;
+    top: 80px;
     left: 130px;
+    font-size: 24px;
 } 
 #tltitle{
     margin-right: 20px;
@@ -34,4 +36,5 @@ header{
 }
 #tlinfo{
     color: white;
+
 }
