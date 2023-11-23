@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import './bar.css';
-import { Link } from 'react-router-dom';
-
+import { Link,useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const HeaderStyle = styled.header`
     width: 100%;
@@ -10,7 +11,12 @@ const HeaderStyle = styled.header`
     background-color: ${(props) => props.color};
 `;
 
-function TBar({color,category}) {     
+function TBar({color,category}) { 
+    const movePage= useNavigate(); 
+
+    function moveScrapSearch() {
+        movePage('/');
+      }  
     let category_1 ;
     if (category == 'news')
         category_1 = '시사/뉴스';
@@ -32,8 +38,11 @@ function TBar({color,category}) {
         <HeaderStyle color={color}>
         {/* <header> */}
             <div className='ht-set2'>
-                <div id='searchbar'>
-                    검색창
+                <div className='ht-searchbarWrap'>
+                    <div className='ht-searchBtn' onClick={moveScrapSearch}>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </div>
+                    <input type='text' placeholder='파일 검색'/>
                 </div>
                 <img src='/images/Img_Ring.png' alt='이미지1' id='ring' />
                 <img src='/images/Img_Light.png' alt='이미지2' id='light' />

@@ -1,7 +1,14 @@
 import './bar.css';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 function LBar({type}) {
+    const movePage= useNavigate(); 
+
+    function moveScrapSearch() {
+        movePage('/');
+      }
     let typed ;
     if (type == 'file')
         typed = '파일';
@@ -12,8 +19,11 @@ function LBar({type}) {
     return (
       <header>
         <div className='hl-set2'>
-            <div id='searchbar'>
-                검색창
+            <div className='hl-searchbarWrap'>
+                <div className='hl-searchBtn' onClick={moveScrapSearch}>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </div>
+                <input type='text' placeholder='파일 검색'/>
             </div>
             <img src='/images/Img_Ring.png' alt='이미지1' id='ring' />
             <img src='/images/Img_Light.png' alt='이미지2' id='light' />
@@ -23,7 +33,7 @@ function LBar({type}) {
                 <img id='tllogo' src='/img/Logo.png' alt='로고'/>
             </Link>
             <div id='tltext'>
-                <p id='tltitle'><strong>시사/뉴스</strong></p>
+                <p id='tltitle'>시사/뉴스</p>
                 <p id='tlinfo'>&gt; {typed}</p>
             </div>
         </div>
