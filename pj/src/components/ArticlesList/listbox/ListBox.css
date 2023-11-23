@@ -4,6 +4,7 @@
     border: none;
     border-radius: 30px;
     background-color: rgba(248, 249, 250, 1); 
+    font-family: 'Pretendard-Regular', 'sans-serif';
 }
 .list-container{
     display: flex;
