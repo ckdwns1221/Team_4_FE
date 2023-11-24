@@ -1,4 +1,4 @@
-.list-container .list-btn {
+.posts-list .list-btn {
     height: 130px;
     width: 208px;
     border: none;
@@ -7,7 +7,7 @@
     font-family: 'Pretendard-Regular', 'sans-serif';
     font-size: large;
 }
-.list-container{
+.posts-list{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -25,3 +25,11 @@
 span{
     margin-left: 5px;
 }
+#list-box-title{
+    font-size: 16px;
+}
+#list-box-date{
+    font-size: 12px;
+    color: #848586;
+}
+
