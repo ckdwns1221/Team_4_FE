@@ -51,7 +51,7 @@ function ArticleRaw ({data, onCancle}) {
                 <div id="cat_type">
                     <div id="cat_modal">{data.category}</div>
                     <div id="type_modal">{data.type}</div>
-                    <div id="pub_modal">{data.public?'public':'non-public'}</div>
+                    <div id="pub_modal">{data.public?'public':'Private'}</div>
                 </div>
                 <div id="title_heart_modal">
                     <input
