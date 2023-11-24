@@ -1,77 +1,93 @@
 #note-what-for {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px ;
-    font-size: 1.5rem;
-    font-weight: normal;
-  
-    > span:nth-last-child(1) {
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.25s;
-    
-    }
-  }
-  #note-what-for:hover{
-    color: #E4F1FA;
-  }
-  #note-title {
-    width: 90%;
-    margin-bottom: 1rem;
-    border: 1px solid #c2c2c2;
-    outline: none;
-    border: none;
-    resize: none;
-    font-size: large;
-    margin: 10px 0px;
-    text-align: left;
-  }
-  #note-from {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #note-text ,#note-link {
-    width: 490px;
-    height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px ;
+  font-size: 1.5rem;
+  font-weight: normal;
+
+  > span:nth-last-child(1) {
     font-size: 1rem;
-    border-radius: 16px;
-    background-color: #F5F5F5;
-    border: none;
-    resize: none;
-    margin: 10px 0px;
-    padding-left: 10px;
-  }
-  #file-select{
-    height: 40px;
-    width: 490px;
-    display: flex;
-    align-items: center;
-    border-radius: 16px;
-    background-color: #E4F1FA;
-    margin: 10px 0px;
-    padding-left: 10px;
-  }
-  #note-file{
-    padding-left: 10px;
-  }
-  .foot-btn{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: relative;
-    top: 20px;
-    margin: 0px 10px;
-  }
-  .modal-c-btn , .modal-d-btn{
-    height: 17px;
-    width: 40px;
     cursor: pointer;
-    font-size: 14px;
-    border: none;
-    background-color: white;    
+    transition: 0.25s;
+  
   }
-  .modal-d-btn{
-    color: #E57373;
-  }
+}
+#note-what-for:hover{
+  color: #E4F1FA;
+}
+#note-title {
+  width: 90%;
+  border: 1px solid #000000;
+  outline: none;
+  border: none;
+  resize: none;
+  font-size: large;
+  margin-left: 20px;
+}
+#note-from {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#note-text ,#note-link {
+  width: 490px;
+  height: 70px;
+  font-size: 1rem;
+  border-radius: 16px;
+  background-color: #F5F5F5;
+  border: none;
+  resize: none;
+  margin: 10px 0px;
+  padding-left: 10px;
+}
+#file-select{
+  height: 40px;
+  width: 490px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  background-color: #E4F1FA;
+  margin: 10px 0px;
+  padding-left: 10px;
+}
+#note-file{
+  padding-left: 10px;
+}
+.foot-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  margin: 0px 10px;
+}
+#date-modal{
+  font-size: 12px;
+  color: #848586;
+  position: absolute;
+  left: 10px;
+}
+.modal-c-btn , .modal-d-btn{
+  height: 17px;
+  width: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  background-color: white;    
+}
+.modal-d-btn{
+  color: #E57373;
+}
+#title_heart_modal{
+display: flex;
+flex-direction: row;
+align-items: center;
+width: 100%;
+margin: 10px 20px;
+}
+#heart{
+width: 24px;
+height: 24px;
+}

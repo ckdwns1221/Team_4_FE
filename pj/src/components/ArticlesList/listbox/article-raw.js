@@ -12,7 +12,8 @@ function ArticleRaw ({data, onCancle}) {
             title:'',
             text:'',
             subject:'수정',
-            noteNum: -1
+            noteNum: -1,
+            date : new Date()
         }
     );
     const [delModal,setDelModal] = useState(false);
@@ -39,6 +40,8 @@ function ArticleRaw ({data, onCancle}) {
             [name]: value
         });
     };
+    const date = state.date.toISOString();
+
     return (
         <>
             <div id="note-what-for">
@@ -82,6 +85,7 @@ function ArticleRaw ({data, onCancle}) {
                 />
             </div>
             <div className="foot-btn">
+                <p id="date-modal">{date}</p>
                 <button className="modal-c-btn" onClick={onCancle}>수정</button>
                 <button className="modal-d-btn" onClick={chageDeleteModal}>삭제</button>
 
