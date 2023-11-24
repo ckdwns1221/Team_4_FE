@@ -1,0 +1,25 @@
+#slogo{
+    position: absolute;
+    top: 21px;
+    left: 130px;
+}
+#stext{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 130px;
+} 
+#stitle{
+    margin-right: 20px;
+    font-size: 24px;
+}
+#ring{
+    position: absolute;
+    left: -20px;
+}
+#light{
+    position: absolute;
+    right: 0px;
+}
