@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom'
 import '../css/WriteScrap.css'
 import Navbar from '../components/Navbar'
 
@@ -23,11 +23,25 @@ export default function WriteScrap() {
         { name : "공개" },
         { name : "나만 보기"},
     ];
-    const movePage= useNavigate();
 
-    function moveMain() {
-      movePage('/');
+    
+    const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const openModal = () => {
+        setIsOpen(true);
     }
+
+    const closeModal = () => {
+        setIsOpen(false);
+        navigate('/')
+    }
+
+    const goToScrap = () => {
+        setIsOpen(false);
+        navigate('/scrap')
+    }
+
     return (
         <div className='display-container'>
             <Navbar />
@@ -112,9 +126,18 @@ export default function WriteScrap() {
                         ))}
                     </div>
                 </div>
-                <button className='wBottomBtn'  onClick={moveMain}>
-                    스크랩 등록
-                </button>
+                <button className='wBottomBtn' onClick={openModal}>스크랩 등록</button>
+                {isOpen && (
+                    <div className="modal-container">
+                        <div className="wModalWrap">
+                            <p>새로운 스크랩이 추가되었어요!</p>
+                            <div className="wModalBtn">
+                                <button className="wMCBtn" onClick={closeModal}>닫기</button>
+                                <button className="wMGBtn" onClick={goToScrap}>확인하러 가기</button>
+                            </div>
+                        </div>
+                     </div>
+                )}
             </div>
         </div>
     )
