@@ -35,3 +35,20 @@
     top: 15px;
     right: 15%;
 }
+.logoutWrap {
+    position: relative;
+    margin: 15px 30px 0 0;
+}
+.imgProfile {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    top: 10px;
+    right: 65%;
+}
+.Main-navLogout {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}

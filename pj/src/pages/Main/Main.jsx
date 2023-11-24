@@ -27,7 +27,7 @@ function Main() {
     }
 
     function moveMypage() {
-      movePage('/');
+      movePage('/mypage');
     }
     function moveShare() {
       movePage('/share');
@@ -41,22 +41,21 @@ function Main() {
             <Link to='/'>
                 <img className='MainLogoImg' src="img/Logo.png" alt="Logo.png" />
             </Link>
-            <div className='Main-navLogin' onClick={ moveLogin }>
+            {/* <div className='Main-navLogin' onClick={ moveLogin }>
               로그인
+            </div> */}
+            <div className='mLogoutWrap'>
+                <Link to='/mypage'>
+                    <div className="mImgProfile">
+                        <img src="/img/Img_Profile.png" alt="" />
+                    </div>
+                </Link>
+                <Link to='/' style={{textDecoration: "none"}}>
+                    <div className="mNavLogout">
+                        로그아웃
+                    </div>
+                </Link>
             </div>
-            {/* <div className="randomProfile" onClick={ moveMypage}>
-              <Avatar
-                size={28}
-                name="Random avatar"
-                variant="beam"
-                colors={["#3d0a49", "#5015bd", "#027fe9", "#00caf8", "#e0daf7"]}
-              />
-            </div>
-            <Link to='/'>
-              <div className="Main-navLogout">
-                로그아웃
-              </div>
-            </Link> */}
           </div>
 
           {/* Main section */}
