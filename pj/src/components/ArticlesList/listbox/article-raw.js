@@ -3,6 +3,8 @@ import './article-raw.css';
 import { useState, useEffect } from "react";
 import ModalPage from "./modal";
 import DeleteRaw from "./delete";
+import heart from '../../../images/Ic_Heart.png';
+import heart_filled from '../../../images/Ic_Heart_Filled.png';
 
 function ArticleRaw ({data, onCancle}) {
     const [ state, setState ] = useState(
@@ -43,14 +45,17 @@ function ArticleRaw ({data, onCancle}) {
                 <span onClick={onCancle}>ⅹ</span>
             </div>
             <div id="note-from">
-                <input
-                    id="note-title"
-                    name="title"
-                    type="text"
-                    placeholder="제목을 입력하세요."
-                    value={title}
-                    onChange={onChange}
-                />
+                <div id="title_heart_modal">
+                    <input
+                        id="note-title"
+                        name="title"
+                        type="text"
+                        placeholder="제목을 입력하세요."
+                        value={title}
+                        onChange={onChange}
+                    />
+                    <img id="heart" src={data.like?heart:heart_filled} alt="찜"/>
+                </div>
                 <div id="file-select">
                    <input
                     id="note-file"

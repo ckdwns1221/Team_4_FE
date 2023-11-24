@@ -4,6 +4,8 @@ import ArticleRaw from "../../ArticlesList/listbox/article-raw";
 import ModalPage from "../../ArticlesList/listbox/modal";
 import Pagination from "../../pagination";
 import data from '../../../db.json';
+import heart from '../../../images/Ic_Heart.png';
+import heart_filled from '../../../images/Ic_Heart_Filled.png';
 
 const SearchBox = ({searchkey}) => {
     // 필터
@@ -50,7 +52,10 @@ const SearchBox = ({searchkey}) => {
                         <button onClick={()=>{modalOpen(); cilckIndex(index);}} className="list-btn">
                             <p>사진</p>
                         </button>
-                        <span id="list-box-title">{it.title}</span>
+                        <div id="title_heart">
+                            <span id="list-box-title">{it.title}</span>
+                            <img id="heart" src={it.like?heart:heart_filled} alt="찜"/>
+                        </div>
                         <span id="list-box-date">{it.date}</span>
                     </div>
                 ))}
