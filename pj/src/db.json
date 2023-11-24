@@ -62,7 +62,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22"
-          },{
+          },
+          {
             "id": 8,
             "author": "최현호",
             "title" : "빅데프 과제3",
@@ -73,6 +74,60 @@
           },
           {
             "id": 9,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 10,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 11,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 12,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 13,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 14,
+            "author": "최현호",
+            "title" : "빅데프 과제3",
+            "content": ".pdf",
+            "category": "news",
+            "type" : "file",
+            "date" : "2023-11-22"
+          },
+          {
+            "id": 15,
             "author": "최현호",
             "title" : "빅데프 과제3",
             "content": ".pdf",
