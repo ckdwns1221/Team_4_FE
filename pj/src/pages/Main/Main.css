@@ -3,7 +3,6 @@
     /* height: 100vh; */
 }
 
-
 /* Nav Section */
 .mainNav-container {
     display: flex;
@@ -23,12 +22,19 @@
     right: 5%;
     cursor: pointer;
 }
+.randomProfile {
+    position: absolute;
+    right: 9%;
+    top: 27px;
+    cursor: pointer;
+}
 .Main-navLogout {
     position: absolute;
     font-size: 14px;
     font-weight: 600;
     top: 32px;
     right: 5%;
+    color: #000000;
 }
 
 
@@ -119,8 +125,7 @@
     width: 60%;
     height: auto;
 }
-.fileBox-news {
-    background-color: #ffd392;
+#fileBox {
     border-radius: 30px;
     width: 168px;
     height: 90px;
@@ -128,76 +133,33 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+}
+.boxHeader {
+    color: #000000;
+}
+.fileBox-news {
+    background-color: #ffd392;
 }
 .fileBox-food {
     background-color: #ffac92;
-    border-radius: 30px;
-    width: 168px;
-    height: 90px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
 }
 .fileBox-arts {
     background-color: #ffcfe8;
-    border-radius: 30px;
-    width: 168px;
-    height: 90px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
 }
 .fileBox-finance {
     background-color: #92caff;
-    border-radius: 30px;
-    width: 168px;
-    height: 90px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
 }
 .fileBox-tech {
     background-color: #ff929f;
-    border-radius: 30px;
-    width: 168px;
-    height: 90px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
 }
 .fileBox-health {
     background-color: #a192ff;
-    border-radius: 30px;
-    width: 168px;
-    height: 90px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
 }
 .fileBox-business{
     background-color: #dc92ff;
-    border-radius: 30px;
-    width: 168px;
-    height: 90px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
 }
 .fileBox-etc {
     background-color: #e1e2e3;
-    border-radius: 30px;
-    width: 168px;
-    height: 90px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
 }
 .boxHeader{
     font-size: 18px;

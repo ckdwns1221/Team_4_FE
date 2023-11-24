@@ -7,7 +7,7 @@ import './Main.css'
 /* font-awesome */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-
+import Avatar from "boring-avatars";
 function Main() {
     const movePage= useNavigate();
 
@@ -18,32 +18,11 @@ function Main() {
       movePage('/login');
     }
     function moveScrapSearch() {
+      movePage('/search');
+    }
+    function moveMypage() {
       movePage('/');
     }
-    /* function moveNews() {
-      movePage('/');
-    }
-    function moveFood() {
-      movePage('/');
-    }
-    function moveArts() {
-      movePage('/');
-    }
-    function moveFinance() {
-      movePage('/');
-    }
-    function moveTech() {
-      movePage('/');
-    }
-    function moveHealth() {
-      movePage('/');
-    }
-    function moveBusiness() {
-      movePage('/');
-    }
-    function moveEtc() {
-      movePage('/');
-    } */
 
     return (
       <div className='display-container'>
@@ -56,7 +35,15 @@ function Main() {
             <div className='Main-navLogin' onClick={ moveLogin }>
               로그인
             </div>
-            {/* <Link to='/'>
+            {/* <div className="randomProfile" onClick={ moveMypage}>
+              <Avatar
+                size={28}
+                name="Random avatar"
+                variant="beam"
+                colors={["#3d0a49", "#5015bd", "#027fe9", "#00caf8", "#e0daf7"]}
+              />
+            </div>
+            <Link to='/'>
               <div className="Main-navLogout">
                 로그아웃
               </div>
@@ -85,50 +72,50 @@ function Main() {
                 </button>
             </div>
             <div className='main-fileWrap'>
-              <Link to="/news">
-                <div className="fileBox-news">
+              <Link to="/news" style={{textDecoration: "none"}}>
+                <div className="fileBox-news" id='fileBox'>
                   <div className="boxHeader">시사/뉴스</div>
                   <img src="img/Ic_News.png" alt="Ic_News.png" className="fileIcon" />
                 </div>
               </Link>
-              <Link to="/food">
-                <div className="fileBox-food">
+              <Link to="/food" style={{textDecoration: "none"}}>
+                <div className="fileBox-food" id='fileBox'>
                   <div className="boxHeader">푸드</div>
                   <img src="img/Ic_Fastfood.png" alt="" className="fileIcon" />
                 </div>
               </Link>
-              <Link to="/culture">
-                <div className="fileBox-arts">
+              <Link to="/culture" style={{textDecoration: "none"}}>
+                <div className="fileBox-arts" id='fileBox'>
                   <div className="boxHeader">문화/예술</div>
                   <img src="img/Ic_Brush.png" alt="" className="fileIcon" />
                 </div>
               </Link>
-              <Link to="/economy">
-                <div className="fileBox-finance">
+              <Link to="/economy" style={{textDecoration: "none"}}>
+                <div className="fileBox-finance" id='fileBox'>
                   <div className="boxHeader">경제/금융</div>
                   <img src="img/Ic_Finance.png" alt="" className="fileIcon" />
                 </div>
               </Link>
-              <Link to="/it">
-                <div className="fileBox-tech">
+              <Link to="/it" style={{textDecoration: "none"}}>
+                <div className="fileBox-tech" id='fileBox'>
                   <div className="boxHeader">It/기술</div>
                   <img src="img/Ic_Tech.png" alt="" className="fileIcon" />
                 </div>
               </Link>
-              <Link to="/health">
-                <div className="fileBox-health">
+              <Link to="/health" style={{textDecoration: "none"}}>
+                <div className="fileBox-health" id='fileBox'>
                   <div className="boxHeader">건강/의학</div>
                   <img src="img/Ic_Health.png" alt="" className="fileIcon" />
                 </div>
               </Link>
-              <Link to="/business">
-                <div className="fileBox-business">
+              <Link to="/business" style={{textDecoration: "none"}}>
+                <div className="fileBox-business" id='fileBox'>
                   <div className="boxHeader">비즈니스</div>
                   <img src="img/Ic_Business.png" alt="" className="fileIcon" />
                 </div>
               </Link>
-              <Link to="/etc">
-                <div className="fileBox-etc">
+              <Link to="/etc" style={{textDecoration: "none"}}>
+                <div className="fileBox-etc" id='fileBox'>
                   <div className="boxHeader">기타</div>
                   <img src="img/Ic_Etc.png" alt="" className="fileIcon" />
                 </div>
