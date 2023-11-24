@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import './TypeSelect.css';
 import Footer from '../../components/Footer';
 import TypeBox from '../../components/TypeSelect/typebox/typebox';
-import TBar from '../../components/TypeSelect/bar/bar';
+import TBar from '../../components/TypeSelect/TypeSelectBar';
 
 function TypeSelect() {
     let { category } = useParams();
