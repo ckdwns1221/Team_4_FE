@@ -1,13 +1,13 @@
-import React from 'react';
+import {React,useState} from 'react';
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 import Footer from '../../components/Footer';
 import './Main.css'
 /* font-awesome */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import Avatar from "boring-avatars";
+/* import Avatar from "boring-avatars"; */
 function Main() {
     const movePage= useNavigate();
 
@@ -17,11 +17,20 @@ function Main() {
     function moveLogin() {
       movePage('/login');
     }
-    function moveScrapSearch() {
-      movePage('/search');
+    //search 구현
+    const [search, setSearch] = useState("");
+    const onChange = (e) => {
+        setSearch(e.target.value)
     }
+    function moveScrapSearch() {
+      movePage('/search' , {state:{search:search}});
+    }
+
     function moveMypage() {
       movePage('/');
+    }
+    function moveShare() {
+      movePage('/share');
     }
 
     return (
@@ -65,7 +74,7 @@ function Main() {
                   <div className='searchBtn' onClick={moveScrapSearch}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </div>
-                  <input type='text' placeholder='파일 검색'/>
+                  <input type='text' placeholder='파일 검색' value={search} onChange={onChange}/>
               </div>
                 <button className='addScrapBtn' onClick={moveWriteScrap}>
                   스크랩 추가하기
@@ -120,7 +129,12 @@ function Main() {
                   <img src="img/Ic_Etc.png" alt="" className="fileIcon" />
                 </div>
               </Link>
-              
+           </div>
+            <div className="gotoShareWrap">
+              다른 사람들의 스크랩도 궁금하다면?
+              <div className="gotoSPBtn" onClick={moveShare}>
+                공유 페이지로 이동
+              </div>
             </div>
           </div>
         </div>

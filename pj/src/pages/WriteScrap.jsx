@@ -1,15 +1,45 @@
-import React/* , { useState } */ from 'react'
-import { useNavigate } from 'react-router-dom';
-
+import React, { useState } from 'react';
+import { Link, useNavigate  } from 'react-router-dom'
 import '../css/WriteScrap.css'
 import Navbar from '../components/Navbar'
 
-
 export default function WriteScrap() {
-    const movePage= useNavigate();
 
-    function moveMain() {
-      movePage('/');
+    const [activeButton, setActiveButton] = useState(null);
+    const buttons = [
+      { name: "시사/뉴스" },
+      { name: "푸드" },
+      { name: "문화/예술" },
+      { name: "경제/금융" },
+      { name: "IT/기술" },
+      { name: "건강/의학" },
+      { name: "비즈니스" },
+      { name: "기타" },
+    ];
+    const colors = ["#ffd392", "#ffac92", "#ffcfe8", "#92caff", "#ff929f", "#a192ff", "#dc92ff", "#e1e2e3"]; // 각 버튼별 색상
+
+    const [activeRButton, setActiveRButton] = useState(null);
+    const rBtns =[
+        { name : "공개" },
+        { name : "나만 보기"},
+    ];
+
+    
+    const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const openModal = () => {
+        setIsOpen(true);
+    }
+
+    const closeModal = () => {
+        setIsOpen(false);
+        navigate('/')
+    }
+
+    const goToScrap = () => {
+        setIsOpen(false);
+        navigate('/scrap')
     }
 
     return (
@@ -21,7 +51,7 @@ export default function WriteScrap() {
             <div className='WriteScrap-container'>
                 <div className="wContentWrap">
                     <div className='wInputTitle'>
-                        제목
+                        제목 <span className='starCR'>*</span>
                     </div>
                     <div className='wInputWrap'>
                         <input 
@@ -59,29 +89,55 @@ export default function WriteScrap() {
                             placeholder='스크랩에 대해 설명해주세요.' />
                     </div>
                     <div className='wInputTitle' style={{ marginTop: "26px"}}>
-                        카테고리
+                        카테고리 <span className='starCR'>*</span>
                     </div> 
                     <div className="categoryBtn">
-                        <button className="cBtnNews" id='wBtn'>시사/뉴스</button>                        
-                        <button className="cBtnFood" id='wBtn'>푸드</button>
-                        <button className="cBtnArts" id='wBtn' >문화/예술</button>
-                        <button className="cBtnFinance" id='wBtn'>경제/금융</button>
-                        <button className="cBtnTech" id='wBtn'>IT/기술</button>
-                        <button className="cBtnHealth" id='wBtn'>건강/의학</button>
-                        <button className="cBtnBusiness" id='wBtn'>비즈니스</button>
-                        <button className="cBtnEtc" id='wBtn'>기타</button>
+                        {buttons.map((button, index) => (
+                            <button
+                                id="wBtn"
+                                className={button.class}
+                                key={index}
+                                style={{
+                                    backgroundColor: activeButton === index ? colors[index] : "#f5f5f5", // 활성화된 버튼은 각각의 색으로, 아니면 회색으로
+                                    color: activeButton === index ? "black" : "#5d5d5f" // 활성화된 버튼은 글씨가 검정색, 아니면 회색으로
+                                }}
+                                onClick={() => setActiveButton(index)}>
+                                {button.name}
+                            </button>
+                        ))}
                     </div>
+                    
                     <div className='wInputTitle' style={{ marginTop: "26px"}}>
-                        공개 여부   
+                        공개 여부 <span className='starCR'>*</span>
                     </div> 
                     <div className="releaseBtn">
-                        <button className="rYesBtn" id='wBtn'>공개</button>
-                        <button className="rNoBtn" id='wBtn'>나만 보기</button>
+                        {rBtns.map((button, index) => (
+                            <button
+                                id='wBtn'
+                                className='rYONBtn'
+                                key={index}
+                                style={{
+                                    backgroundColor: activeRButton === index ? "#bedcf3" : "#f5f5f5",
+                                    color: activeRButton === index ? "black" : "#5d5d5f"
+                                }}
+                                onClick={() => setActiveRButton(index)}>
+                                    {button.name}
+                            </button>
+                        ))}
                     </div>
                 </div>
-                <button className='wBottomBtn'  onClick={moveMain}>
-                    스크랩 등록
-                </button>
+                <button className='wBottomBtn' onClick={openModal}>스크랩 등록</button>
+                {isOpen && (
+                    <div className="modal-container">
+                        <div className="wModalWrap">
+                            <p>새로운 스크랩이 추가되었어요!</p>
+                            <div className="wModalBtn">
+                                <button className="wMCBtn" onClick={closeModal}>닫기</button>
+                                <button className="wMGBtn" onClick={goToScrap}>확인하러 가기</button>
+                            </div>
+                        </div>
+                     </div>
+                )}
             </div>
         </div>
     )

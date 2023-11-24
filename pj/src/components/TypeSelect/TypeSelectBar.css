@@ -1,0 +1,61 @@
+
+#tlogo{
+    position: absolute;
+    top: 21px;
+    left: 130px;
+}
+#ttext{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 130px;
+} 
+#ttitle{
+    margin-right: 20px;
+    font-size: 24px;
+}
+#tinfo{
+    font-size: 16px;
+    color: #5D5E5F;
+}
+#ring{
+    position: absolute;
+    left: -20px;
+}
+#light{
+    position: absolute;
+    right: 0px;
+}
+/* #ht-searchbar{
+    position: absolute;
+    top: 92px;
+    left: 840px;
+} */
+.ht-searchbarWrap {
+    position: absolute;
+    margin-right: 25px;
+    top: 91px;
+    right: 60px;
+}
+.ht-searchBtn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: inherit;
+    padding: 12px 0 0 5px;
+    cursor: pointer;
+}
+.ht-searchbarWrap > input {
+    width: 351px;
+    height: 40px;
+    border: none;
+    border-radius: 16px;
+    background-color: #f5f5f5;
+    padding-left: 50px;
+}
+.ht-searchbarWrap input::placeholder {
+    font-weight: 600;
+}

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import './bar.css';
-import { Link } from 'react-router-dom';
-
+import './TypeSelectBar.css';
+import { Link,useNavigate } from 'react-router-dom';
+import Search from '../Search';
 
 const HeaderStyle = styled.header`
     width: 100%;
@@ -10,7 +10,7 @@ const HeaderStyle = styled.header`
     background-color: ${(props) => props.color};
 `;
 
-function TBar({color,category}) {     
+function TBar({color,category}) {  
     let category_1 ;
     if (category == 'news')
         category_1 = '시사/뉴스';
@@ -32,9 +32,7 @@ function TBar({color,category}) {
         <HeaderStyle color={color}>
         {/* <header> */}
             <div className='ht-set2'>
-                <div id='searchbar'>
-                    검색창
-                </div>
+                <Search/>
                 <img src='/images/Img_Ring.png' alt='이미지1' id='ring' />
                 <img src='/images/Img_Light.png' alt='이미지2' id='light' />
             </div>

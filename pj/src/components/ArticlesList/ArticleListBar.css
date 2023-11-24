@@ -1,0 +1,60 @@
+#tllogo{
+    position: absolute;
+    top: 21px;
+    left: 130px;
+}
+#tltext{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 130px;
+    font-size: 24px;
+} 
+#tltitle{
+    margin-right: 20px;
+}
+#ring{
+    position: absolute;
+    left: -20px;
+}
+#light{
+    position: absolute;
+    right: 0px;
+}
+#searchbar{
+    position: absolute;
+    top: 92px;
+    left: 840px;
+}
+#tlinfo{
+    color: white;
+
+}
+.hl-searchbarWrap {
+    position: absolute;
+    margin-right: 25px;
+    top: 91px;
+    right: 60px;
+}
+.hl-searchBtn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: inherit;
+    padding: 12px 0 0 5px;
+    cursor: pointer;
+}
+.hl-searchbarWrap > input {
+    width: 351px;
+    height: 40px;
+    border: none;
+    border-radius: 16px;
+    background-color: #f5f5f5;
+    padding-left: 50px;
+}
+.hl-searchbarWrap input::placeholder {
+    font-weight: 600;
+}
