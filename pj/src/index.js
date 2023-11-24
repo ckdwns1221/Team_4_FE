@@ -12,6 +12,7 @@ import TypeSelect from './pages/TypeSelect/TypeSelect';
 import ArticlesList from './pages/ArticlesList/ArticlesList';
 import SearchPage from './pages/SearchPage/SearchPage';
 import Mypage from './pages/Mypage';
+import SharePage from './pages/SharePage';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,11 @@ const router = createBrowserRouter([
       {
         path: "/mypage",
         element: <Mypage />,
-      }
+      },
+      {
+        path: "/share",
+        element: <SharePage />,
+      },
     ],
   },
 ]);
