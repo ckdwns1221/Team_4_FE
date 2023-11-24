@@ -10,6 +10,8 @@ import Main from './pages/Main/Main';
 import WriteScrap from './pages/WriteScrap';
 import TypeSelect from './pages/TypeSelect/TypeSelect';
 import ArticlesList from './pages/ArticlesList/ArticlesList';
+import SearchPage from './pages/SearchPage/SearchPage';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/:category/:type",
         element: <ArticlesList />,
+      },
+      {
+        path: "/search",
+        element: <SearchPage />,
       },
     ],
   },

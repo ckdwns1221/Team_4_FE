@@ -12,10 +12,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 880px;
-    height: 557px;
+    height: 570px;
+    z-index: -1;;
 }
 .list{
-    height: 185px;
+    height: 170px;
     width: 25%;
     margin-bottom: 0px;
     display: flex;
@@ -27,6 +28,7 @@ span{
 }
 #list-box-title{
     font-size: 16px;
+    margin: 5px;
 }
 #list-box-date{
     font-size: 12px;

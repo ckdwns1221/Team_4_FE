@@ -15,7 +15,7 @@ function LBar({type,category,color}) {
     const movePage= useNavigate(); 
 
     function moveScrapSearch() {
-        movePage('/');
+        movePage('/search');
       }
 
     let category_1 ;
@@ -35,7 +35,7 @@ function LBar({type,category,color}) {
         category_1 = '경제/금융';
     else if(category=='etc')
         category_1 = '기타';
-    
+
     let typed ;
     if (type == 'file')
         typed = '파일';
