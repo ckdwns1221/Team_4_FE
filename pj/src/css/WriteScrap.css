@@ -104,3 +104,7 @@
 .rYesBtn {
     margin: 10px 16px 0 10px;
 }
+
+.cBtnNews:active {
+    background-color: #ffd392;
+}

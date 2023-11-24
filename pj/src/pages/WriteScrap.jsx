@@ -1,17 +1,15 @@
 import React/* , { useState } */ from 'react'
 import { useNavigate } from 'react-router-dom';
-
 import '../css/WriteScrap.css'
 import Navbar from '../components/Navbar'
 
-
 export default function WriteScrap() {
+
     const movePage= useNavigate();
 
     function moveMain() {
       movePage('/');
     }
-
     return (
         <div className='display-container'>
             <Navbar />

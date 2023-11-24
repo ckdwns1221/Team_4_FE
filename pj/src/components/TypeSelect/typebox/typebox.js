@@ -14,21 +14,23 @@ const ButtonStyle = styled.button`
     font-size: large;
 `;
 const TypeBox = ({category,color}) => {
-    
+    const category_ = category ;
+    const color_ = color ;
+    console.log(category_);
     return(
         <div className="type-box-all">
-            <Link to={`/${category}/file`}>
+            <Link to={`/${category}/file`} state={{category:category_, color:color_ }}>
                 <ButtonStyle color={color}> 
                     <p>파일</p>
                 </ButtonStyle>
             </Link>
-            <Link to={`/${category}/link`}>
-                <ButtonStyle color={color}>
+            <Link to={`/${category}/link`} state={{category:category_, color:color_ }}>
+                <ButtonStyle color={color}> 
                     <p>링크</p>
                 </ButtonStyle>
             </Link>
-            <Link to={`/${category}/memo`}>
-                <ButtonStyle color={color}>
+            <Link to={`/${category}/memo`} state={{category:category_, color:color_ }}>
+                <ButtonStyle color={color}> 
                     <p>메모</p>
                 </ButtonStyle>
             </Link>
