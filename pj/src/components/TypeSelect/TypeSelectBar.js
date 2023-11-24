@@ -15,7 +15,7 @@ function TBar({color,category}) {
     const movePage= useNavigate(); 
 
     function moveScrapSearch() {
-        movePage('/');
+        movePage('/search');
       }  
     let category_1 ;
     if (category == 'news')

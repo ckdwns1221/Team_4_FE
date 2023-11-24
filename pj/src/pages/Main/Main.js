@@ -18,7 +18,7 @@ function Main() {
       movePage('/login');
     }
     function moveScrapSearch() {
-      movePage('/');
+      movePage('/search');
     }
     function moveShare() {
       movePage('/share');
