@@ -3,6 +3,8 @@ import './article-raw.css';
 import { useState, useEffect } from "react";
 import ModalPage from "./modal";
 import DeleteRaw from "./delete";
+import heart from '../../../images/Ic_Heart.png';
+import heart_filled from '../../../images/Ic_Heart_Filled.png';
 
 function ArticleRaw ({data, onCancle}) {
     const [ state, setState ] = useState(
@@ -10,7 +12,8 @@ function ArticleRaw ({data, onCancle}) {
             title:'',
             text:'',
             subject:'수정',
-            noteNum: -1
+            noteNum: -1,
+            date : new Date()
         }
     );
     const [delModal,setDelModal] = useState(false);
@@ -37,20 +40,30 @@ function ArticleRaw ({data, onCancle}) {
             [name]: value
         });
     };
+    const date = state.date.toISOString();
+
     return (
         <>
             <div id="note-what-for">
                 <span onClick={onCancle}>ⅹ</span>
             </div>
             <div id="note-from">
-                <input
-                    id="note-title"
-                    name="title"
-                    type="text"
-                    placeholder="제목을 입력하세요."
-                    value={title}
-                    onChange={onChange}
-                />
+                <div id="cat_type">
+                    <div id="cat_modal">{data.category}</div>
+                    <div id="type_modal">{data.type}</div>
+                    <div id="pub_modal">{data.public?'public':'non-public'}</div>
+                </div>
+                <div id="title_heart_modal">
+                    <input
+                        id="note-title"
+                        name="title"
+                        type="text"
+                        placeholder="제목을 입력하세요."
+                        value={title}
+                        onChange={onChange}
+                    />
+                    <img id="heart" src={data.like?heart:heart_filled} alt="찜"/>
+                </div>
                 <div id="file-select">
                    <input
                     id="note-file"
@@ -77,6 +90,7 @@ function ArticleRaw ({data, onCancle}) {
                 />
             </div>
             <div className="foot-btn">
+                <p id="date-modal">{date}</p>
                 <button className="modal-c-btn" onClick={onCancle}>수정</button>
                 <button className="modal-d-btn" onClick={chageDeleteModal}>삭제</button>
 

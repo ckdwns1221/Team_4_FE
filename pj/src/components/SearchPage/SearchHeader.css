@@ -49,3 +49,12 @@
     position: relative;
     top :2px;
 }
+#blue{
+    color: #3C71B8;
+}
+#stext{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    font-size: 24px;
+}
