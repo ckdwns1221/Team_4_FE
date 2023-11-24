@@ -1,6 +1,6 @@
-import React from 'react';
+import {React,useState} from 'react';
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 import Footer from '../../components/Footer';
 import './Main.css'
@@ -17,9 +17,15 @@ function Main() {
     function moveLogin() {
       movePage('/login');
     }
-    function moveScrapSearch() {
-      movePage('/search');
+    //search 구현
+    const [search, setSearch] = useState("");
+    const onChange = (e) => {
+        setSearch(e.target.value)
     }
+    function moveScrapSearch() {
+      movePage('/search' , {state:{search:search}});
+    }
+
     function moveMypage() {
       movePage('/');
     }
@@ -68,7 +74,7 @@ function Main() {
                   <div className='searchBtn' onClick={moveScrapSearch}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </div>
-                  <input type='text' placeholder='파일 검색'/>
+                  <input type='text' placeholder='파일 검색' value={search} onChange={onChange}/>
               </div>
                 <button className='addScrapBtn' onClick={moveWriteScrap}>
                   스크랩 추가하기
