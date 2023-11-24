@@ -9,10 +9,10 @@
     margin-bottom: 100px;
 }
 .wTitleWrap {
-    margin-top: -50px;
-    margin-left: 138px;
+    margin-top: 30px;
     font-size: 26px;   
     font-weight: 700;
+    text-align: center;
 }
 .wContentWrap {
     margin-top: 50px;
@@ -44,9 +44,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.wInputWrap::placeholder {
-    color: #dadada;
 }
 .wInput {
     width: 800px;
@@ -91,7 +88,7 @@
     padding: 0 10px;
     
 }
-.cBtnNews {
+#wBtn {
     border: none;
     border-radius: 8px;
     background-color: #f5f5f5;
@@ -99,70 +96,15 @@
     font-size: 12px;
     font-weight: 600;
     padding: 8px 0;
+    width: 86px;
+    height: 32px;
+    cursor: pointer;
 }
-.cBtnFood {
-    border: none;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    color: #5d5d5f;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 8px 0;
+
+.rYesBtn {
+    margin: 10px 16px 0 10px;
 }
-.cBtnArts {
-    border: none;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    color: #5d5d5f;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 8px 0;
-}
-.cBtnFinance {
-    border: none;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    color: #5d5d5f;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 8px 0;
-}
-.cBtnTech {
-    border: none;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    color: #5d5d5f;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 8px 0;
-}
-.cBtnHealth {
-    border: none;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    color: #5d5d5f;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 8px 0;
-}
-.cBtnBusiness {
-    border: none;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    color: #5d5d5f;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 8px 0;
-}
-.cBtnEtc {
-    border: none;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    color: #5d5d5f;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 8px 0;
-}
+
 .cBtnNews:active {
     background-color: #ffd392;
 }

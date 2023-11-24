@@ -1,12 +1,9 @@
-import React/* , { useState, useEffect } */ from 'react'
+import React/* , { useState } */ from 'react'
 import { useNavigate } from 'react-router-dom';
-
 import '../css/WriteScrap.css'
 import Navbar from '../components/Navbar'
 
-
 export default function WriteScrap() {
-
 
     const movePage= useNavigate();
 
@@ -17,7 +14,7 @@ export default function WriteScrap() {
         <div className='display-container'>
             <Navbar />
             <div className="wTitleWrap">
-                    스크랩 추가하기
+                스크랩 추가하기
             </div>
             <div className='WriteScrap-container'>
                 <div className="wContentWrap">
@@ -63,20 +60,21 @@ export default function WriteScrap() {
                         카테고리
                     </div> 
                     <div className="categoryBtn">
-                        <button className="cBtnNews">시사/뉴스</button>
-                        <button className="cBtnFood">푸드</button>
-                        <button className="cBtnArts">문화/예술</button>
-                        <button className="cBtnFinance">경제/금융</button>
-                        <button className="cBtnTech">IT/기술</button>
-                        <button className="cBtnHealth">건강/의학</button>
-                        <button className="cBtnBusiness">비즈니스</button>
-                        <button className="cBtnEtc">기타</button>
+                        <button className="cBtnNews" id='wBtn'>시사/뉴스</button>                        
+                        <button className="cBtnFood" id='wBtn'>푸드</button>
+                        <button className="cBtnArts" id='wBtn' >문화/예술</button>
+                        <button className="cBtnFinance" id='wBtn'>경제/금융</button>
+                        <button className="cBtnTech" id='wBtn'>IT/기술</button>
+                        <button className="cBtnHealth" id='wBtn'>건강/의학</button>
+                        <button className="cBtnBusiness" id='wBtn'>비즈니스</button>
+                        <button className="cBtnEtc" id='wBtn'>기타</button>
                     </div>
                     <div className='wInputTitle' style={{ marginTop: "26px"}}>
                         공개 여부   
                     </div> 
                     <div className="releaseBtn">
-
+                        <button className="rYesBtn" id='wBtn'>공개</button>
+                        <button className="rNoBtn" id='wBtn'>나만 보기</button>
                     </div>
                 </div>
                 <button className='wBottomBtn'  onClick={moveMain}>
