@@ -60,7 +60,7 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  top: 20px;
+  top: 5px;
   margin: 0px 10px;
 }
 #date-modal{
@@ -91,3 +91,35 @@ margin: 10px 20px;
 width: 24px;
 height: 24px;
 }
+#cat_type{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 50px;
+}
+#cat_modal{
+  width: 76px;
+  height: 31px;
+  border-radius: 8px;
+  background-color: #ffd392ad;
+  text-align: center;
+  margin-right: 10px;
+}
+#type_modal{
+  width: 76px;
+  height: 31px;
+  border-radius: 8px;
+  background-color: #BEDCF3;
+  color: #3661A5;
+  text-align: center;
+  margin-right: 10px;
+}
+#pub_modal{
+  width: 76px;
+  height: 31px;
+  border-radius: 8px;
+  background-color: #BEBFC0;
+  color: white;
+  text-align: center;
+}
+

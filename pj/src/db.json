@@ -8,7 +8,8 @@
             "category": "news",
             "type" : "memo",
             "date" : "2023-11-22",
-            "like" : true
+            "like" : true,
+            "public" : true
           },
           {
             "id": 2,
@@ -18,7 +19,8 @@
             "category": "news",
             "type" : "link",
             "date" : "2023-11-22",
-            "like" : true
+            "like" : true,
+            "public" : true
           },
           {
             "id": 3,
@@ -28,7 +30,8 @@
             "category": "food",
             "type" : "link",
             "date" : "2023-11-22",
-            "like" : true
+            "like" : true,
+            "public" : true
           },
           {
             "id": 4,
@@ -38,7 +41,8 @@
             "category": "news",
             "type" : "memo",
             "date" : "2023-11-22",
-            "like" : true
+            "like" : true,
+            "public" : true
           },
           {
             "id": 5,
@@ -48,7 +52,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : false
+            "like" : false,
+            "public" : true
           },
           {
             "id": 6,
@@ -58,7 +63,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : false
+            "like" : false,
+            "public" : false
           },
           {
             "id": 7,
@@ -68,7 +74,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : false
+            "like" : false,
+            "public" : false
           },
           {
             "id": 8,
@@ -78,7 +85,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : true
+            "like" : true,
+            "public" : false
           },
           {
             "id": 9,
@@ -88,7 +96,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : true
+            "like" : true,
+            "public" : true
           },
           {
             "id": 10,
@@ -98,7 +107,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : true
+            "like" : true,
+            "public" : false
           },
           {
             "id": 11,
@@ -108,7 +118,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : false
+            "like" : false,
+            "public" : true
           },
           {
             "id": 12,
@@ -118,7 +129,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : false
+            "like" : false,
+            "public" : true
           },
           {
             "id": 13,
@@ -128,7 +140,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : false
+            "like" : false,
+            "public" : true
           },
           {
             "id": 14,
@@ -138,7 +151,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : false
+            "like" : false,
+            "public" : true
           },
           {
             "id": 15,
@@ -148,7 +162,8 @@
             "category": "news",
             "type" : "file",
             "date" : "2023-11-22",
-            "like" : false
+            "like" : false,
+            "public" : true
           }
     ]
   }

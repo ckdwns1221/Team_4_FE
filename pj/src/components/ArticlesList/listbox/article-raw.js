@@ -48,6 +48,11 @@ function ArticleRaw ({data, onCancle}) {
                 <span onClick={onCancle}>ⅹ</span>
             </div>
             <div id="note-from">
+                <div id="cat_type">
+                    <div id="cat_modal">{data.category}</div>
+                    <div id="type_modal">{data.type}</div>
+                    <div id="pub_modal">{data.public?'public':'non-public'}</div>
+                </div>
                 <div id="title_heart_modal">
                     <input
                         id="note-title"
