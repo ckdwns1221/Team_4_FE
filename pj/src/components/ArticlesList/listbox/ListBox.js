@@ -38,7 +38,7 @@ const ListBox = ({category}) => {
                     </div>
                 ))}
                 {isOpen && dataList[index]&& (
-                    <ModalPage>
+                    <ModalPage width={550} height={380}>
                         <ArticleRaw 
                             data = {dataList[index]}
                             onCancle={modalOpen}

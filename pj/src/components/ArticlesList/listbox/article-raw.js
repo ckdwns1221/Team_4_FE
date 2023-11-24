@@ -1,7 +1,8 @@
 import React  from "react";
 import './article-raw.css';
 import { useState, useEffect } from "react";
-
+import ModalPage from "./modal";
+import DeleteRaw from "./delete";
 
 function ArticleRaw ({data, onCancle}) {
     const [ state, setState ] = useState(
@@ -12,6 +13,11 @@ function ArticleRaw ({data, onCancle}) {
             noteNum: -1
         }
     );
+    const [delModal,setDelModal] = useState(false);
+    const chageDeleteModal = () => {
+        setDelModal(!delModal);
+    };
+
     const { title, text } = state;
     console.log(data);
     //수정할 때, 이전 내용 기억하는 거 구현 (바뀐 내용은 onChange에서 구현함)
@@ -72,10 +78,17 @@ function ArticleRaw ({data, onCancle}) {
             </div>
             <div className="foot-btn">
                 <button className="modal-c-btn" onClick={onCancle}>수정</button>
-                <button className="modal-d-btn" onClick={onCancle}>삭제</button>
+                <button className="modal-d-btn" onClick={chageDeleteModal}>삭제</button>
 
             </div>
-            
+            {delModal && (
+                    <ModalPage width={470} height={180}>
+                        <DeleteRaw
+                            data = {data}
+                            onCancle={onCancle}
+                        />
+                    </ModalPage>
+            )}
             
         </>
     )

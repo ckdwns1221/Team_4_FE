@@ -1,0 +1,48 @@
+#memo-what-for {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+  }
+#memo-del{
+    padding: 0px 20px;
+}
+#memo-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    
+    #memo-no-button {
+        border: none;
+        border-radius: 16px;
+        padding: 0.5rem;
+        background-color: #BEBFC0;
+        color: #5D5E5F;
+        font-size: 16px;
+        font-weight: normal;
+        margin-right: 10px;
+  
+        &:hover {
+            background-color: #5D5E5F;
+            color: white;
+        }
+    }
+    #memo-yes-button {
+        border: none;
+        border-radius: 16px;
+        width: 106px;
+        height: 45px;
+        padding: 0.5rem;
+        background-color: #e5737373;
+        color : #E57373;
+        font-size: 16px;
+        font-weight: normal;
+        margin-right: 10px;
+        
+        &:hover {
+            background-color: #E57373;
+            color: white;
+        }
+    }
+}
