@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import './bar.css';
+import './TypeSelectBar.css';
 import { Link,useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";

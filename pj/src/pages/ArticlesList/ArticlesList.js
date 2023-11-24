@@ -1,16 +1,21 @@
 import './ArticlesList.css';
-import LBar from '../../components/ArticlesList/bar/bar';
+import LBar from '../../components/ArticlesList/ArticleListBar';
 import ListBox from '../../components/ArticlesList/listbox/ListBox';
 import Footer from '../../components/Footer';
-import { useParams } from 'react-router-dom';
+import { useParams,useLocation } from 'react-router-dom';
 
 
 function ArticlesList() {
     let { type } = useParams();
+
+    const location = useLocation()
+    const category = location.state?.category;
+    const color = location.state?.color;
+    console.log(category);
     return (
         <div className="display-container">
             <div className='mainWrap'>
-                <LBar type={type}/>
+                <LBar type={type} category={category} color={color}/>
                     <main>
                         <ListBox/>
                     </main>
