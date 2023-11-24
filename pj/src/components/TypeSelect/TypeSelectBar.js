@@ -30,7 +30,6 @@ function TBar({color,category}) {
         category_1 = '기타';
     return (
         <HeaderStyle color={color}>
-        {/* <header> */}
             <div className='ht-set2'>
                 <Search/>
                 <img src='/images/Img_Ring.png' alt='이미지1' id='ring' />
@@ -45,7 +44,12 @@ function TBar({color,category}) {
                     <p id='tinfo'>찾고자 하는 파일 유형을 선택해주세요.</p>
                 </div>
             </div>
-        {/* </header>  */}
+            <div className='ht-set3'>
+                <p>로그아웃</p>
+                <div id='t_user_radius'>
+                    <img src='img/profile.png' alt='프로필' id='t_user_image'/>
+                </div>
+            </div>
         </HeaderStyle>
     );
 }

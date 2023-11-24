@@ -55,7 +55,7 @@ const SearchBox = ({searchkey}) => {
                     </div>
                 ))}
                 {isOpen && posts[index]&& (
-                    <ModalPage>
+                    <ModalPage width={550} height={380}>
                         <ArticleRaw 
                             data = {posts[index]}
                             onCancle={modalOpen}

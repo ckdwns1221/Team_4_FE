@@ -26,6 +26,12 @@ function SHeader({searchkey}) {
                 <p id='stitle'>{searchkey}에 대한 검색 결과</p>
                 </div>
             </div>
+            <div className='hs-set3'>
+                <p>로그아웃</p>
+                <div id='s_user_radius'>
+                    <img src='img/profile.png' alt='프로필' id='s_user_image'/>
+                </div>
+            </div>
         </HeaderStyle>
     );
 }
