@@ -23,7 +23,8 @@ function SHeader({searchkey}) {
                     <p id='slogo'><img src='/img/Logo.png' alt='로고'/></p>
                 </Link>
                 <div id='stext'>
-                <p id='stitle'>{searchkey}에 대한 검색 결과</p>
+                    <p id='blue'>'{searchkey}'</p>
+                    <p id='stitle'>에 대한 검색 결과</p>
                 </div>
             </div>
             <div className='hs-set3'>
