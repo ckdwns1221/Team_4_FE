@@ -49,9 +49,9 @@ function ArticleRaw ({data, onCancle}) {
             </div>
             <div id="note-from">
                 <div id="cat_type">
-                    <div id="cat_modal">{data.category}</div>
-                    <div id="type_modal">{data.type}</div>
-                    <div id="pub_modal">{data.public?'public':'Private'}</div>
+                    <div id="cat_modal"><p>{data.category}</p></div>
+                    <div id="type_modal"><p>{data.type}</p></div>
+                    <div id="pub_modal"><p>{data.public?'public':'Private'}</p></div>
                 </div>
                 <input
                     id="note-title"

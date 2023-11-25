@@ -19,6 +19,8 @@ const SearchBox = ({searchkey}) => {
     const [limit, setLimit] = useState(12);
     const [page, setPage] = useState(1);
 
+    const clickIndex = (c) => { setIndex(c); };
+
     useEffect(() => {
         // 검색어가 변경될 때마다 검색 결과 업데이트
         const newSearched = dataList.filter((item) =>
@@ -45,15 +47,19 @@ const SearchBox = ({searchkey}) => {
     return(
         <div className="search-container">
             <div className="posts-list">
-                {posts.slice(offset, offset + limit).map((it,index) =>(
-                    <div className="list" key={index}>
-                        <button onClick={()=>{modalOpen(); cilckIndex(index);}} className="list-btn">
-                            <p>사진</p>
-                        </button>
-                        <span id="list-box-title">{it.title}</span>
-                        <span id="list-box-date">{it.date}</span>
-                    </div>
-                ))}
+                {posts.length === 0 || !searchkey ? (
+                    <p>검색 결과가 없습니다.</p>
+                ) : (
+                    posts.slice(offset, offset + limit).map((it, index) => (
+                        <div className="list" key={index}>
+                            <button onClick={() => { modalOpen(); clickIndex(index); }} className="list-btn">
+                                <p>사진</p>
+                            </button>
+                            <span id="list-box-title">{it.title}</span>
+                            <span id="list-box-date">{it.date}</span>
+                        </div>
+                    ))
+                )}
                 {isOpen && posts[index]&& (
                     <ModalPage width={550} height={380}>
                         <ArticleRaw 
