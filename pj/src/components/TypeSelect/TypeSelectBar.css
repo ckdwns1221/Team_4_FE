@@ -1,87 +1,84 @@
-
-#tlogo{
-    position: absolute;
-    top: 21px;
-    left: 130px;
-}
-#ttext{
+.TSNav-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    top: 80px;
-    left: 130px;
-} 
-#ttitle{
-    margin-right: 20px;
-    font-size: 24px;
+    justify-content: space-between;
 }
-#tinfo{
-    font-size: 16px;
-    color: #5D5E5F;
-}
-#ring{
-    position: absolute;
-    left: -20px;
-}
-#light{
-    position: absolute;
-    right: 0px;
-}
-/* #ht-searchbar{
-    position: absolute;
-    top: 92px;
-    left: 840px;
-} */
-.ht-searchbarWrap {
-    position: absolute;
-    margin-right: 25px;
-    top: 91px;
-    right: 60px;
-}
-.ht-searchBtn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: inherit;
-    padding: 12px 0 0 5px;
-    cursor: pointer;
-}
-.ht-searchbarWrap > input {
-    width: 351px;
-    height: 40px;
-    border: none;
-    border-radius: 16px;
-    background-color: #f5f5f5;
-    padding-left: 50px;
-}
-.ht-searchbarWrap input::placeholder {
-    font-weight: 600;
-}
-
-.ht-set3{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position :absolute;
-    right: 30px;
-}
-#t_user_radius{
-    width: 32px;
-    height: 32px;
-    z-index: 5;
-    border-radius: 100%;
-    margin-left: 10px;
-    background-color: #FFE9BF ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#t_user_image{
-    width: 20px;
-    height: 20px;
-    z-index: 10;
+.TSBg-Ring {
     position: relative;
-    top :2px;
+    z-index: 0;
 }
+.TSNav-logo {
+    position: absolute;
+    top: 25px;
+    left: 65%;
+    z-index: 0;
+}
+.TSBg-Light {
+    position: relative;
+    margin: 15px 30px 0 0;
+}
+.TSLink-login {
+    color: black;
+    text-decoration: none;
+}
+.TSNav-loginBtn {
+    position: absolute;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    top: 15px;
+    right: 65%;
+}
+.TSNav-signupBtn {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    top: 15px;
+    right: 15%;
+}
+.TSLogoutWrap {
+    position: relative;
+    margin: 15px 30px 0 0;
+}
+.TSNavImgProfile {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    top: 8px;
+    right: 65%;
+}
+.TSNavLogout {
+    position: absolute;
+    top: 15px;
+    right: 20%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+.typeAndSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -70px;
+    position: relative;
+    z-index: 10;
+    height: 45px;
+}
+#tText {
+    display: flex;
+    flex-direction: row;
+    margin-left: 138px;
+}
+#tTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 15px;
+}
+#tInfo{
+    color: #5d5e5f;
+    margin-top: 35px;
+}
+.TSBSearch {
+    margin: 10px 120px 0 0;
+}
+
+

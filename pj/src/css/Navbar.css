@@ -41,13 +41,13 @@
 }
 .imgProfile {
     position: absolute;
-    font-size: 14px;
-    font-weight: 600;
-    top: 10px;
+    top: 8px;
     right: 65%;
 }
-.Main-navLogout {
+.navLogoutBtn {
     position: absolute;
+    top: 15px;
+    right: 20%;
     font-size: 14px;
     font-weight: 600;
     color: #000000;
