@@ -25,3 +25,13 @@
 span{
     margin-left: 5px;
 }
+#title_heart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    #heart{
+        margin-right: 18px;
+        height: 24px;
+        width: 24px;
+    }
+}

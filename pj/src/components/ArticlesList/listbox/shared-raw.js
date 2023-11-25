@@ -6,7 +6,7 @@ import DeleteRaw from "./delete";
 import heart from '../../../images/Ic_Heart.png';
 import heart_filled from '../../../images/Ic_Heart_Filled.png';
 
-function ArticleRaw ({data, onCancle}) {
+function SharedRaw ({data, onCancle}) {
     const [ state, setState ] = useState(
         {   
             title:'',
@@ -49,19 +49,21 @@ function ArticleRaw ({data, onCancle}) {
             </div>
             <div id="note-from">
                 <div id="cat_type">
-                    <div id="cat_modal"><p>{data.category}</p></div>
-                    <div id="type_modal"><p>{data.type}</p></div>
-                    <div id="pub_modal"><p>{data.public?'public':'Private'}</p></div>
+                    <div id="cat_modal">{data.category}</div>
+                    <div id="type_modal">{data.type}</div>
+                    <div id="pub_modal">{data.public?'public':'Private'}</div>
                 </div>
-                <input
-                    id="note-title"
-                    name="title"
-                    type="text"
-                    placeholder="제목을 입력하세요."
-                    value={title}
-                    onChange={onChange}
-                />
-
+                <div id="title_heart_modal">
+                    <input
+                        id="note-title"
+                        name="title"
+                        type="text"
+                        placeholder="제목을 입력하세요."
+                        value={title}
+                        onChange={onChange}
+                    />
+                    <img id="heart" src={data.like?heart:heart_filled} alt="찜"/>
+                </div>
                 <div id="file-select">
                    <input
                     id="note-file"
@@ -107,4 +109,4 @@ function ArticleRaw ({data, onCancle}) {
 
 }
 
-export default ArticleRaw;
+export default SharedRaw;
