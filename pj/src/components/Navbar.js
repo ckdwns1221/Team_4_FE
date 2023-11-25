@@ -13,7 +13,7 @@ const Navbar = () => {
                     </div>
                 </Link>
             </div>
-            <div className='bg-Light'>
+            {/* <div className='bg-Light'>
                 <Link to='/login' className='Link-login'>
                     <div className="Nav-loginBtn">
                         로그인
@@ -25,20 +25,22 @@ const Navbar = () => {
                         회원가입
                     </div>
                 </Link>
-            </div>
-            {/* <div className='logoutWrap'>
-                <Link to='/mypage'>
-                    <div className="navimgProfile">
-                        <img src="/img/Img_Profile.png" alt="" />
-                    </div>
-                    <img className='Nav-Light' alt='Nav-Light' src='img/img_Light.png' />
-                </Link>
-                <Link to='/' style={{textDecoration: "none"}}>
-                    <div className="navLogout">
-                        로그아웃
-                    </div>
-                </Link>
             </div> */}
+            <div className='logoutWrap'>
+                <div className="NMpAndLogout">
+                    <Link to='/mypage'>
+                        <div className="navimgProfile">
+                            <img src="/img/Img_Profile.png" alt="" />
+                        </div>
+                    </Link>
+                    <Link to='/' style={{textDecoration: "none"}}>
+                        <div className="navLogoutBtn">
+                            로그아웃
+                        </div>
+                    </Link>
+                </div>
+                <img className='Nav-Light' alt='Nav-Light' src='img/img_Light.png' />   
+            </div>
       </div>
     );
 };

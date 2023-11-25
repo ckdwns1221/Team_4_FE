@@ -26,7 +26,7 @@ function TypeSelect() {
     return (
         <>
             <div className='display-container'>
-                <div className='mainWrap'>
+                <div className='tMainWrap'>
                     <TBar color={color} category={category}/>
                     <main>
                         <TypeBox color={color} category={category}/>

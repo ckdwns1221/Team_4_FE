@@ -14,7 +14,7 @@ function ArticlesList() {
     console.log(category);
     return (
         <div className="display-container">
-            <div className='mainWrap'>
+            <div className='aMainWrap'>
                 <LBar type={type} category={category} color={color}/>
                     <main>
                         <ListBox/>
