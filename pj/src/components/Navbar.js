@@ -26,6 +26,19 @@ const Navbar = () => {
                     </div>
                 </Link>
             </div>
+            {/* <div className='logoutWrap'>
+                <Link to='/mypage'>
+                    <div className="navimgProfile">
+                        <img src="/img/Img_Profile.png" alt="" />
+                    </div>
+                    <img className='Nav-Light' alt='Nav-Light' src='img/img_Light.png' />
+                </Link>
+                <Link to='/' style={{textDecoration: "none"}}>
+                    <div className="navLogout">
+                        로그아웃
+                    </div>
+                </Link>
+            </div> */}
       </div>
     );
 };

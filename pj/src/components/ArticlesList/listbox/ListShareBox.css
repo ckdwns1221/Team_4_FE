@@ -1,4 +1,4 @@
-.posts-list .list-btn {
+.postsShareList .list-btn {
     height: 130px;
     width: 208px;
     border: none;
@@ -7,15 +7,16 @@
     font-family: 'Pretendard-Regular', 'sans-serif';
     font-size: large;
 }
-.posts-list{
+.postsShareList{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 880px;
-    height: 557px;
+    height: 570px;
+    z-index: -1;;
 }
-.list{
-    height: 185px;
+.pSList{
+    height: 170px;
     width: 25%;
     margin-bottom: 0px;
     display: flex;
@@ -24,6 +25,14 @@
 }
 span{
     margin-left: 5px;
+}
+#list-share-box-title{
+    font-size: 16px;
+    margin: 5px;
+}
+#list-share-box-date{
+    font-size: 12px;
+    color: #848586;
 }
 #title_heart{
     display: flex;
@@ -35,3 +44,5 @@ span{
         width: 24px;
     }
 }
+
+
