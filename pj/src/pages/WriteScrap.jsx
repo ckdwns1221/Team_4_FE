@@ -1,23 +1,18 @@
+
 import React, { useState } from 'react';
 import { useNavigate  } from 'react-router-dom'
 import '../css/WriteScrap.css'
 import Navbar from '../components/Navbar'
 
+import '../css/WriteScrap.css';
+import Navbar from '../components/Navbar';
+
 export default function WriteScrap() {
+  const movePage = useNavigate();
 
-    const [activeButton, setActiveButton] = useState(null);
-    const buttons = [
-      { name: "시사/뉴스" },
-      { name: "푸드" },
-      { name: "문화/예술" },
-      { name: "경제/금융" },
-      { name: "IT/기술" },
-      { name: "건강/의학" },
-      { name: "비즈니스" },
-      { name: "기타" },
-    ];
-    const colors = ["#ffd392", "#ffac92", "#ffcfe8", "#92caff", "#ff929f", "#a192ff", "#dc92ff", "#e1e2e3"]; // 각 버튼별 색상
-
+  function moveMain() {
+    movePage('/');
+  }
     const [activeRButton, setActiveRButton] = useState(null);
     const rBtns =[
         { name : "공개" },
@@ -140,5 +135,10 @@ export default function WriteScrap() {
                 )}
             </div>
         </div>
-    )
+        <button className="wBottomBtn" onClick={moveMain}>
+          스크랩 등록
+        </button>
+      </div>
+    </div>
+  );
 }

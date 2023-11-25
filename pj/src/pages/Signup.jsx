@@ -1,180 +1,125 @@
-import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../css/Signup.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-/* 더미 데이터 */
-const User = {
-    email: 'test1234@email.com',
-    id: 'test1234',
-    pw: 'test1234@@@',
-    pwcheck: 'test1234@@@'
-}
+import { useAuthForm } from '../hooks/useAuthForm';
+import { validateEmail, validatePassword, validateUserName } from '../utils/validateInput';
+import userApi from '../apis/users';
 
 export default function Signup() {
-    const [email, setEmail] =  useState('');
-    const [id, setId] = useState('');
-    const [pw, setPw] = useState('');
-    const [pwcheck, setPwcheck] = useState('');
-
-    const [emailValid, setEmailValid] = useState(false);
-    const [idValid, setIdValid] = useState(false);
-    const [pwValid, setPwValid] = useState(false);
-    const [pwcheckValid, setPwcheckValid] = useState(false);
-
-    const [notAllow, setNotAllow] = useState(true);
-
-    const handleEmail = (e) => {
-        setEmail(e.target.value);
-        // eslint-disable-next-line
-        const regex = /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
-        if (regex.test(e.target.value)) {
-          setEmailValid(true);
-        } else {
-          setEmailValid(false);
-        }
-      };
-    const handleId = (e) => {
-        setId(e.target.value);
-        // eslint-disable-next-line
-        const regex = /^[a-zA-Z0-9]+$/;     
-        if(regex.test(id)) {
-            setIdValid(true);
-        } else {
-            setIdValid(false);
-        }
+  const [signupForm, signUpHandler, areValid] = useAuthForm(
+    {
+      userName: '',
+      nickName: '',
+      password: '',
+      rePassword: '',
+    },
+    {
+      userName: validateUserName,
+      password: validatePassword,
+      rePassword: validatePassword,
+      nickName: validateEmail,
     }
-    const handlePassword = (e) => {
-        setPw(e.target.value);
-        // eslint-disable-next-line
-        const regex = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
-        if(regex.test(pw)) {
-            setPwValid(true);
-        } else {
-            setPwValid(false);
-        }
-    }
-    const handlePasswordcheck = (e) => {
-        setPwcheck(e.target.value);
-        // eslint-disable-next-line
-        const regex = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
-        if(regex.test(pwcheck)) {
-            setPwcheckValid(true);
-        } else {
-            setPwcheckValid(false);
-        }
-    }
-    
-    /* const onClickConfirmButton = () => {
-        if(email === User.email && id === User.id && pw === User.pw && pwcheck === User.pwcheck) {
-            alert('회원가입에 성공했습니다.');
-        } else {
-            alert('양식을 다시 확인해주세요.');
-        }
-    } */
+  );
 
-    const movePage= useNavigate();
+  const movePage = useNavigate();
+  console.log(signupForm);
+  const submitSignup = async () => {
+    console.log(signupForm);
+    await userApi
+      .join({
+        nickName: signupForm.nickName,
+        userName: signupForm.userName,
+        password: signupForm.password,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((e) => console.log(e));
+  };
 
-    function moveMain() {
-      movePage('/');
-    }
-    function moveLogin() {
-        movePage('/login');
-    }
-
-
-    useEffect(() => {
-        if(pwValid && pwcheckValid) {
-            setNotAllow(false);
-            return;
-        }
-        setNotAllow(true);
-    },[pwValid,pwcheckValid])
-      
-    return (
-        <div className='display-container'>
-            <Navbar />
-            <div className="Signup-container">
-                <div className='titleWrap'>
-                    회원가입
-                </div>
-                <div className='contentWrap'>
-                    <div className='inputTitle'>이메일</div>
-                    <div className='inputWrap'>
-                        <input 
-                            type='text'
-                            className='input' 
-                            placeholder='이메일을 입력해주세요.' 
-                            value={email} 
-                            onChange={handleEmail} />
-                    </div>
-                    <div className="errorMessageWrap">
-                        {!emailValid && email.length > 0 && (
-                        <div>올바른 이메일을 입력해주세요.</div>
-                        )}
-                    </div>
-                    <div className='inputTitle' style={{ marginTop: "26px"}}>아이디</div>
-                    <div className='inputWrap'>
-                        <input 
-                            type='text'
-                            className='input' 
-                            placeholder='아이디를 입력해주세요.' 
-                            value={id} 
-                            onChange={handleId} />
-                    </div>
-                    <div className="errorMessageWrap">
-                        {!idValid && id.length > 0 && (
-                        <div>올바른 이메일을 입력해주세요.</div>
-                        )}
-                    </div>
-                    <div className='inputTitle' style={{ marginTop: "26px"}}>
-                        비밀번호
-                    </div> 
-                    <div className='inputWrap'>
-                        <input 
-                            type='password'
-                            className='input' 
-                            placeholder='비밀번호를 입력해주세요.' 
-                            value={pw} 
-                            onChange={handlePassword}/>
-                    </div>
-                    <div className='errorMessageWrap'>
-                        { !pwValid && pw.length > 0 && (
-                            <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
-                        )
-                        }
-                    </div>
-                    <div className='inputTitle' style={{ marginTop: "26px"}}>
-                        비밀번호 확인
-                    </div> 
-                    <div className='inputWrap'>
-                        <input 
-                            type='password'
-                            className='input' 
-                            placeholder='위 비밀번호와 동일하게 입력하세요.' 
-                            value={pwcheck} 
-                            onChange={handlePasswordcheck}/>
-                    </div>
-                    <div className='errorMessageWrap'>
-                        { !pwcheckValid && pwcheck.length > 0 && (
-                            <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
-                        )
-                        }
-                    </div>
-                </div>
-                <div>
-                    <button className='bottomBtn' disabled={notAllow} onClick={moveMain}>
-                        가입하기
-                    </button>
-                    <div className='gotologin'>
-                        이미 가입하셨나요?
-                        <div className='loginBtn' onClick={moveLogin}>로그인하기</div>
-                    </div>
-                </div>
-            </div>
-            <Footer />
+  return (
+    <div className="display-container">
+      <Navbar />
+      <div className="Signup-container">
+        <div className="titleWrap">회원가입</div>
+        <div className="contentWrap">
+          <div className="inputTitle">이메일</div>
+          <div className="inputWrap">
+            <input
+              type="text"
+              className="input"
+              placeholder="이메일을 입력해주세요."
+              name="nickName"
+              value={signupForm.email}
+              onChange={signUpHandler}
+            />
+          </div>
+          <div className="errorMessageWrap">{!areValid.nickName && <div>올바른 이메일을 입력해주세요.</div>}</div>
+          <div className="inputTitle" style={{ marginTop: '26px' }}>
+            아이디
+          </div>
+          <div className="inputWrap">
+            <input
+              type="text"
+              className="input"
+              name="userName"
+              placeholder="아이디를 입력해주세요."
+              value={signupForm.userName}
+              onChange={signUpHandler}
+            />
+          </div>
+          <div className="errorMessageWrap">{!areValid.userName && <div>올바른 이메일을 입력해주세요.</div>}</div>
+          <div className="inputTitle" style={{ marginTop: '26px' }}>
+            비밀번호
+          </div>
+          <div className="inputWrap">
+            <input
+              type="password"
+              className="input"
+              placeholder="비밀번호를 입력해주세요."
+              name="password"
+              value={signupForm.password}
+              onChange={signUpHandler}
+            />
+          </div>
+          <div className="errorMessageWrap">
+            {!areValid.password && <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>}
+          </div>
+          <div className="inputTitle" style={{ marginTop: '26px' }}>
+            비밀번호 확인
+          </div>
+          <div className="inputWrap">
+            <input
+              type="password"
+              className="input"
+              placeholder="위 비밀번호와 동일하게 입력하세요."
+              name="rePassword"
+              value={signupForm.rePassword}
+              onChange={signUpHandler}
+            />
+          </div>
+          <div className="errorMessageWrap">
+            {!areValid.rePassword && <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>}
+          </div>
         </div>
-        
-    )
+        <div>
+          <button
+            className="bottomBtn"
+            disabled={!signupForm.userName && !signupForm.email && !signupForm.password && !signupForm.rePassword}
+            onClick={submitSignup}
+          >
+            가입하기
+          </button>
+          <div className="gotologin">
+            이미 가입하셨나요?
+            <div className="loginBtn" onClick={() => movePage('/login')}>
+              로그인하기
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
