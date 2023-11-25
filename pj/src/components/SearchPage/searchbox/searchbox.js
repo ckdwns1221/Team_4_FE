@@ -47,7 +47,7 @@ const SearchBox = ({searchkey}) => {
     return(
         <div className="search-container">
             <div className="posts-list">
-                {posts.length === 0  ? (
+                {posts.length === 0 || !searchkey ? (
                     <p>검색 결과가 없습니다.</p>
                 ) : (
                     posts.slice(offset, offset + limit).map((it, index) => (
