@@ -7,7 +7,9 @@
             "content": "기창 시험 10/4",
             "category": "news",
             "type" : "memo",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : true,
+            "public" : true
           },
           {
             "id": 2,
@@ -16,16 +18,20 @@
             "content": "링크1",
             "category": "news",
             "type" : "link",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : true,
+            "public" : true
           },
           {
             "id": 3,
             "author": "최현호",
             "title" : "react 공부",
             "content": "링크2",
-            "category": "news",
+            "category": "food",
             "type" : "link",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : true,
+            "public" : true
           },
           {
             "id": 4,
@@ -34,7 +40,9 @@
             "content": "ㅎㅇ",
             "category": "news",
             "type" : "memo",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : true,
+            "public" : true
           },
           {
             "id": 5,
@@ -43,7 +51,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : false,
+            "public" : true
           },
           {
             "id": 6,
@@ -52,7 +62,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : false,
+            "public" : false
           },
           {
             "id": 7,
@@ -61,7 +73,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : false,
+            "public" : false
           },
           {
             "id": 8,
@@ -70,7 +84,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : true,
+            "public" : false
           },
           {
             "id": 9,
@@ -79,7 +95,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : true,
+            "public" : true
           },
           {
             "id": 10,
@@ -88,7 +106,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : true,
+            "public" : false
           },
           {
             "id": 11,
@@ -97,7 +117,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : false,
+            "public" : true
           },
           {
             "id": 12,
@@ -106,7 +128,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : false,
+            "public" : true
           },
           {
             "id": 13,
@@ -115,7 +139,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : false,
+            "public" : true
           },
           {
             "id": 14,
@@ -124,7 +150,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : false,
+            "public" : true
           },
           {
             "id": 15,
@@ -133,7 +161,9 @@
             "content": ".pdf",
             "category": "news",
             "type" : "file",
-            "date" : "2023-11-22"
+            "date" : "2023-11-22",
+            "like" : false,
+            "public" : true
           }
     ]
   }

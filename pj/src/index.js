@@ -11,6 +11,8 @@ import WriteScrap from './pages/WriteScrap';
 import TypeSelect from './pages/TypeSelect/TypeSelect';
 import ArticlesList from './pages/ArticlesList/ArticlesList';
 import SearchPage from './pages/SearchPage/SearchPage';
+import Mypage from './pages/Mypage';
+import SharePage from './pages/SharePage';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <SearchPage />,
+      },
+      {
+        path: "/mypage",
+        element: <Mypage />,
+      },
+      {
+        path: "/share",
+        element: <SharePage />,
       },
     ],
   },

@@ -23,3 +23,38 @@
     position: absolute;
     right: 0px;
 }
+
+.hs-set3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position :absolute;
+    right: 30px;
+}
+#s_user_radius{
+    width: 32px;
+    height: 32px;
+    z-index: 5;
+    border-radius: 100%;
+    margin-left: 10px;
+    background-color: #FFE9BF ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#s_user_image{
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    position: relative;
+    top :2px;
+}
+#blue{
+    color: #3C71B8;
+}
+#stext{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    font-size: 24px;
+}

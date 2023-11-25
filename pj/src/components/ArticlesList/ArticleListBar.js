@@ -53,6 +53,12 @@ function LBar({type,category,color}) {
                 <p id='tlinfo'>&gt; {typed}</p>
             </div>
         </div>
+        <div className='hl-set3'>
+            <p>로그아웃</p>
+            <div id='tl_user_radius'>
+                <img src='img/profile.png' alt='프로필' id='tl_user_image'/>
+            </div>
+        </div>
       </HeaderStyle>
     );
 }

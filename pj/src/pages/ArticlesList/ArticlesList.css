@@ -1,5 +1,6 @@
-.mainWrap{
-    height: calc(100vh - 111px);
+.aMainWrap{
+    /* height: calc(100vh - 111px); */
+    height: 100vh;
 }
 main{
     height: 80%;
@@ -9,8 +10,3 @@ main{
     flex-direction: column;
     margin: auto;
 }
-/* main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
