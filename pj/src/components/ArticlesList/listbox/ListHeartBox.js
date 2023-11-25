@@ -7,7 +7,7 @@ import Pagination from "../../pagination";
 import heart from '../../../images/Ic_Heart.png';
 import heart_filled from '../../../images/Ic_Heart_Filled.png';
 
-const ListShareBox = ({category}) => {
+const ListHeartBox = ({category}) => {
     // 모달
     const dataList = data.notes ;
     const [isOpen, setIsOpen] = useState(false);
@@ -24,14 +24,25 @@ const ListShareBox = ({category}) => {
         // 비동기 작업 (예: API 호출) 후 posts 설정
         setPosts(dataList);
     }, []); 
-    console.log(posts); 
 
     const offset = (page - 1) * limit;
 
+    // {posts.map((item)=>{
+    //     (item.heart?setPostHeart(postsHeart.append(item)):'');
+    // })}
+    useEffect(() => {
+        posts.map((item) => {
+            if (item.like && !postsHeart.some((heartItem) => heartItem.id === item.id)) {
+                setPostHeart((prevPostsHeart) => [...prevPostsHeart, item]);
+            }
+            return null;
+        });
+    }, [posts, postsHeart]);
+    console.log(postsHeart);
     return(
         <div className="list-container">
             <div className="postsShareList">
-                {posts.slice(offset, offset + limit).map((it,index) =>(
+                {postsHeart.slice(offset, offset + limit).map((it,index) =>(
                     <div className="pSList" key={index} onClick={()=>{modalOpen(); clickIndex(index);}}>
                         <button className="list-btn">
                             <p>사진</p>
@@ -69,4 +80,4 @@ const ListShareBox = ({category}) => {
         
     )
 }
-export default ListShareBox;
+export default ListHeartBox;

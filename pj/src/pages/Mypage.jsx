@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import '../css/Mypage.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ListBox from '../components/ArticlesList/listbox/ListBox';
+import ListHeartBox from '../components/ArticlesList/listbox/ListHeartBox';
 /* font-awesome */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
@@ -38,7 +38,7 @@ function Mypage() {
 
     const LikedPosts = () => (
         <div className="mArticlePosts">
-            <ListBox />
+            <ListHeartBox />
         </div>
     );
 

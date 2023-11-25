@@ -4,8 +4,6 @@ import data from '../../../db.json';
 import ArticleRaw from "./article-raw";
 import ModalPage from "./modal";
 import Pagination from "../../pagination";
-import heart from '../../../images/Ic_Heart.png';
-import heart_filled from '../../../images/Ic_Heart_Filled.png';
 
 const ListBox = ({category}) => {
     // 모달
@@ -35,10 +33,7 @@ const ListBox = ({category}) => {
                         <button className="list-btn">
                             <p>사진</p>
                         </button>
-                        <div id="title_heart">
-                            <span id="list-box-title">{it.title}</span>
-                            <img id="heart" src={it.like?heart:heart_filled} alt="찜"/>
-                        </div>
+                        <span id="list-box-title">{it.title}</span>
                         <span id="list-box-date">{it.date}</span>
                     </div>
                 ))}
