@@ -34,4 +34,15 @@ span{
     font-size: 12px;
     color: #848586;
 }
+#title_heart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    #heart{
+        margin-right: 18px;
+        height: 24px;
+        width: 24px;
+    }
+}
+
 

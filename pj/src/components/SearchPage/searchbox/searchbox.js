@@ -4,8 +4,6 @@ import ArticleRaw from "../../ArticlesList/listbox/article-raw";
 import ModalPage from "../../ArticlesList/listbox/modal";
 import Pagination from "../../pagination";
 import data from '../../../db.json';
-import heart from '../../../images/Ic_Heart.png';
-import heart_filled from '../../../images/Ic_Heart_Filled.png';
 
 const SearchBox = ({searchkey}) => {
     // 필터
@@ -45,17 +43,14 @@ const SearchBox = ({searchkey}) => {
     //     setPostNum(!postsNum);
 
     return(
-        <div className="list-container">
+        <div className="search-container">
             <div className="posts-list">
                 {posts.slice(offset, offset + limit).map((it,index) =>(
                     <div className="list" key={index}>
                         <button onClick={()=>{modalOpen(); cilckIndex(index);}} className="list-btn">
                             <p>사진</p>
                         </button>
-                        <div id="title_heart">
-                            <span id="list-box-title">{it.title}</span>
-                            <img id="heart" src={it.like?heart:heart_filled} alt="찜"/>
-                        </div>
+                        <span id="list-box-title">{it.title}</span>
                         <span id="list-box-date">{it.date}</span>
                     </div>
                 ))}
