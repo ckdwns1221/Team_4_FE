@@ -103,8 +103,10 @@ margin-right: 30px;
   height: 31px;
   border-radius: 8px;
   background-color: #ffd392ad;
-  text-align: center;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #type_modal{
   width: 76px;
@@ -112,8 +114,10 @@ margin-right: 30px;
   border-radius: 8px;
   background-color: #BEDCF3;
   color: #3661A5;
-  text-align: center;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #pub_modal{
   width: 76px;
@@ -121,6 +125,8 @@ margin-right: 30px;
   border-radius: 8px;
   background-color: #BEBFC0;
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
