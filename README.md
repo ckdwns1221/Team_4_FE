@@ -1,7 +1,7 @@
 # 2023 어흥올림픽 TEAM 4
 
 <div align="center">
-<img width="329" alt="image" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a">
+<img width="500" alt="image" src="https://github.com/ckdwns1221/ckdwns1221/assets/130385395/dfab6416-e561-4c39-ad65-3ada807254a6">
 
 </div>
 
@@ -44,37 +44,3 @@
 
 ### Communication
 ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white)
-
----
-## 화면 구성 📺
-| 메인 페이지  | 스크랩 페이지  | 카테고리 페이지  | 스크랩 추가하기  | 
-| :-------------------------------------------: | :------------: |
-| 사진 | 사진 |  
-| oo 페이지   |  oo 페이지   |  
-| 사진 | 사진 |
-
----
-## 핵심 기능 📦
-
-### ⭐️ 우리는 이런 기능이 있어요!
-- 기능 설명을 해주세요!
-- 기능 설명을 해주세요!
-
-### ⭐️ 우리는 이런 기능이 있어요!
-- 기능 설명을 해주세요!
-
-### ⭐️ 우리는 이런 기능이 있어요!
-- 기능 설명을 해주세요!
-
----
-## 아키텍쳐
-
-
-### 디렉토리 구조
-```bash
-├── README.md
-└── package.json
-
-여러분들의 프로젝트 디렉토리 구조를 적어주세요!
-
-```
